@@ -7,12 +7,12 @@ function filterRowsByGraduationYear() {
     var filteredValues = [];
   
     for (var i = 0; i < responsesValues.length; i++) {
-      var graduationYear = responsesValues[i][1]; // Assuming the graduation year column is the second column (B)
-  
+      var graduationYear = String(responsesValues[i][17]); // Assuming the graduation year column is the second column (B)
+
       // Extract numbers from the graduation year
-      var numericYear = graduationYear.replace(/\D/g, ''); // Remove non-numeric characters
-  
-      if (numericYear && parseInt(numericYear) <= 2023) {
+      var numericYear = graduationYear.match(/\d+/);
+
+      if (numericYear && parseInt(numericYear[0]) < 2023) {
         filteredValues.push(responsesValues[i]);
       }
     }
