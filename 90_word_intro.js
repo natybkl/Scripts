@@ -16,7 +16,7 @@ function generateIntroductions() {
   }
   
   function generateIntroduction(prompt) {
-    var apiKey = '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';
+    var apiKey = 'OPEN_AI_API_KEY';
     var apiUrl = 'https://api.openai.com/v1/engines/text-davinci-003/completions';
     
     var headers = {
